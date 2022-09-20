@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Item from './item';
 
-export default ({ title, items = [], toggleItem, removeItem }) => {
+export default ({ title, items = [] }) => {
   const [filter, setFilter] = useState('');
 
   const visibleItems = items.filter((item) =>
@@ -24,12 +24,7 @@ export default ({ title, items = [], toggleItem, removeItem }) => {
       <h2 className="font-bold text-2xl">{title}</h2>
       <ul>
         {visibleItems.map((item) => (
-          <Item
-            key={item.id}
-            {...item}
-            toggleItem={toggleItem}
-            removeItem={removeItem}
-          />
+          <Item key={item.id} {...item} />
         ))}
       </ul>
     </section>

@@ -1,4 +1,9 @@
-export default ({ name, packed, id, toggleItem, removeItem }) => {
+import { useContext } from 'react';
+import { ItemsContext } from './context';
+
+export default ({ name, packed, id }) => {
+  const { toggleItem, removeItem } = useContext(ItemsContext);
+
   return (
     <li className="flex items-center gap-2 mb-2">
       <input

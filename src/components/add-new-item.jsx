@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ItemsContext } from './context';
 
 export default ({ onSubmit: handleSubmit }) => {
   const [value, setValue] = useState('');
+  const { addItem } = useContext(ItemsContext);
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        handleSubmit(value);
+        addItem(value);
       }}
       className="flex flex-col gap-8"
     >
