@@ -30,6 +30,13 @@ module.exports = {
           color: theme('colors.pink.200'),
           cursor: 'no-allowed',
         },
+        'button.small': {
+          fontSize: '0.7rem',
+          padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
+          border: 'none',
+          color: theme('colors.red.800'),
+          backgroundColor: theme('colors.red.50'),
+        },
         'button.secondary': {
           backgroundColor: theme('colors.pink.50'),
         },
